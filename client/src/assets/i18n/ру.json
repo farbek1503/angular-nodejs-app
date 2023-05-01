@@ -1,0 +1,82 @@
+{
+	"firstName": "Имя",
+	"lastName": "Фамилия",
+	"gender": "Пол",
+	"male": "Мужской",
+	"woman": "Женщина",
+	"brithday": "День рождения",
+	"email": "Электронная почта",
+	"password": "Пароль",
+	"gotoLogin": "Перейти На Входа",
+	"gotoRegister": "Перейти К Регистрации",
+	"cardFound": "Вы Не Создали Ни Одной Карты",
+	"notFound": "Ой! Страница не найдена.",
+	"alerts": {
+		"delete": "Удалить",
+		"allRequire": "Заполните Все Входные Данные",
+		"serverError": "Ошибка Сервера",
+      "login": {
+			"userNotFound": "Пользователь Не Найден",
+			"passwordWrong": "Неверный Пароль",
+         "success": "Успешный Вход"
+      },
+		"register": {
+			"userExists": "Этот Пользователь Существует",
+			"success": "Успешно Зарегистрирован"
+		},
+		"createCard": {
+			"success": "Карта Успешно Создана"
+		},
+		"editCard": {
+			"success": "Карта Успешно Изменена"
+		}
+   },
+	"themes": {
+		"toggle": "Белый | Темный"
+	},
+	"buttons": {
+		"moreBtn": "Еще",
+		"editBtn": "Изменить",
+		"deleteBtn": "Удалить",
+		"back": "Назад",
+		"next": "Следующий",
+		"login": "Авторизоваться",
+		"register": "Зарегистрироваться"
+	},
+	"cards": {
+		"title": "Заголовок",
+		"description": "Описание",
+		"imgUrl": "URL изображения",
+		"createBtn": "Создать Карту",
+		"editBtn": "Сохранить Редактирование",
+		"author": "Автор",
+		"homeBtn": "На главную"
+	},
+	"navbar": {
+		"settings": "Настройки",
+		"languages": "Языки",
+		"logout": "Выйти"
+	},
+	"navbarLink": {
+		"home": "Дом",
+		"createCard": "Создать Карту"
+	},
+	"settings": {
+		"tabs": {
+			"general": "Общий",
+			"passwordChange": "Смена пароля",
+			"yourCard": "Моя Карта"
+		},
+		"canelBtn": "Канель",
+		"saveChanges": "Сохранить изменения",
+		"saveNewPassword": "Сохранить новый пароль",
+		"oldPassword": "Старый пароль",
+		"newPassword": "Новый пароль",
+		"cardTitle": "Заголовок",
+		"createdCard": "Созданная Карта",
+		"actions": "Действия"
+	},
+	"footer": {
+		"msg": "Все права защищены"
+	}
+}

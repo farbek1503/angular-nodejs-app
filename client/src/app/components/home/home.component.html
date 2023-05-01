@@ -1,0 +1,54 @@
+<div class="dark:bg-gray-600 dark:text-white">
+	<app-navbar></app-navbar>
+	
+	<div class="container my-10 mx-auto">
+		<div class="flex flex-wrap -mx-1 lg:-mx-4">
+			<!-- Column -->
+			<div *ngFor="let card of cards" class="my-3 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+				<article class="overflow-hidden rounded-lg shadow-xl">
+					<img class="block h-80 w-full" src="{{card.image}}">
+					
+					<div class="dark:bg-gray-800">
+						<header class="flex justify-center leading-tight p-2 md:p-4">
+							<h3 class="text-xl">
+								{{card.title | uppercase}}
+							</h3>
+						</header>
+						
+						<footer class="flex items-center justify-between leading-none p-2 md:p-4">
+							<div class="flex items-center no-underline">
+								<div class="flex ml-2 text-base font-la">
+									<span class="hover:underline font-regular cursor-pointer">{{card.user_id.email}}</span>
+								</div>
+							</div>
+							<p class="no-underline text-base text-grey-darker">
+								{{card.createdAt | date}}
+							</p>
+						</footer>
+					</div>
+					
+					<div>
+						<div *ngIf="isToken == card.user_id._id">
+							<button mat-flat-button class="bg-blue-400 w-1/3 text-base text-white font-po font-regular" (click)="moreCard(card._id)">
+								{{'buttons.moreBtn' | translate}} <i class="fa-solid fa-caret-down fa-rotate-270 ml-1"></i>
+							</button>
+							<button mat-flat-button class="bg-emerald-400 w-1/3 text-base text-white font-po font-regular" (click)="editCard(card._id)">
+								{{'buttons.editBtn' | translate}} <i class="fa-solid fa-pen ml-1"></i>
+							</button>
+							<button mat-flat-button class="bg-red-400 w-1/3 text-base text-white font-po font-regular" (click)="deleteCard(card._id)">
+								{{'buttons.deleteBtn' | translate}} <i class="fa-solid fa-trash-can ml-1"></i>
+							</button>
+						</div>
+						<div *ngIf="isToken !== card.user_id._id">
+							<button mat-flat-button class="bg-blue-400 w-full text-base text-white font-po font-regular" (click)="moreCard(card._id)">
+								{{'buttons.moreBtn' | translate}} <i class="fa-solid fa-caret-down fa-rotate-270 ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</article>
+			</div> <!-- END Column -->
+		</div>
+	</div>
+	
+	<app-footer></app-footer>
+</div>

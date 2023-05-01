@@ -1,0 +1,82 @@
+{
+   "firstName": "First Name",
+   "lastName": "Last Name",
+   "gender": "Gender",
+   "male": "Male",
+   "woman": "Woman",
+   "brithday": "Brithday",
+   "email": "Email",
+   "password": "Password",
+   "gotoLogin": "GoTo Login",
+   "gotoRegister": "GoTo Register",
+   "cardFound": "You Have Not Created Any Cards",
+	"notFound": "Oops! Page not found.",
+   "alerts": {
+		"delete": "Delete",
+      "allRequire": "Fill In All The Inputs",
+      "serverError": "Server Error",
+      "login": {
+         "userNotFound": "User Not Found",
+         "passwordWrong": "Password Wrong",
+         "success": "Successfully Logged In"
+      },
+		"register": {
+			"userExists": "This User Exists",
+			"success": "Successfully Registered"
+		},
+		"createCard": {
+			"success": "Card Created Successfully"
+		},
+		"editCard": {
+			"success": "Card Updated Successfully"
+		}
+   },
+   "themes": {
+      "toggle": "Light | Dark"
+   },
+   "buttons": {
+      "moreBtn": "More",
+      "editBtn": "Edit",
+      "deleteBtn": "Delete",
+      "back": "Back",
+      "next": "Next",
+      "login": "Sign In",
+      "register": "Sign Up"
+   },
+   "cards": {
+      "title": "Title",
+      "description": "Description",
+      "imgUrl": "Image URL",
+      "createBtn": "Create Card",
+      "editBtn": "Save Editing",
+      "author": "Author",
+      "homeBtn": "GoTo Home"
+   },
+   "navbar": {
+      "settings": "Settings",
+      "languages": "Languages",
+      "logout": "Logout"
+   },
+   "navbarLink": {
+      "home": "Home",
+      "createCard": "Create Card"
+   },
+   "settings": {
+      "tabs": {
+         "general": "General",
+         "passwordChange": "Password Changes",
+         "yourCard": "My Card"
+      },
+      "canelBtn": "Canel",
+      "saveChanges": "Save Changes",
+      "saveNewPassword": "Save New Password",
+      "oldPassword": "Old Password",
+      "newPassword": "New Password",
+      "cardTitle": "Title",
+      "createdCard": "Created Card",
+      "actions": "Actions"
+   },
+   "footer": {
+      "msg": "All Rights Reserved"
+   }
+}

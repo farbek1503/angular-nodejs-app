@@ -1,0 +1,41 @@
+<div class="dark:bg-gray-600 dark:text-white">
+	<app-navbar></app-navbar>
+	
+	<div class="m-10 shadow-2xl">
+		<mat-card class="dark:bg-gray-700">
+			<mat-card-content class="font-po font-regular text-5">
+				<form (ngSubmit)="editCard()" [formGroup]="EditCardForm">
+					<mat-form-field class="example-form-field w-full" appearance="outline">
+						<mat-label class="dark:text-white tracking-widest">
+							{{'cards.title' | translate}}
+						</mat-label>
+						<input class="dark:text-gray-300" formControlName="title" matInput type="text" [(ngModel)]="title">
+					</mat-form-field>
+					
+					<mat-form-field class="example-form-field w-full" appearance="outline">
+						<mat-label class="dark:text-white tracking-widest">
+							{{'cards.imgUrl' | translate}}
+							</mat-label>
+						<input class="dark:text-gray-300" formControlName="image" matInput type="text" [(ngModel)]="image">
+					</mat-form-field>
+					
+					<mat-form-field class="example-full-width w-full" appearance="outline">
+						<mat-label class="dark:text-white tracking-widest">
+							{{'cards.description' | translate}}
+							</mat-label>
+						<textarea class="dark:text-gray-300" cols="30" rows="10" formControlName="description" matInput [(ngModel)]="description"></textarea>
+					</mat-form-field>
+					<div class="flex gap-5">
+						<button routerLink="/home" mat-button class="w-full font-po font-light text-base bg-green-400">{{'cards.homeBtn' | translate}}</button>
+						<button type="submit" mat-stroked-button class="bg-orange-400 font-po font-light text-base w-full">{{'cards.editBtn' | translate}}</button>
+					</div>
+				</form>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	
+	<div class="mt-36">
+		<app-footer></app-footer>
+	</div>
+	
+</div>

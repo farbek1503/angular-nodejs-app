@@ -1,0 +1,189 @@
+<div class="dark:bg-gray-600">
+	<app-navbar></app-navbar>
+	
+	<mat-tab-group class="mt-5" mat-stretch-tabs="false" mat-align-tabs="center" [color]="'accent'" [backgroundColor]="'primary'">
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<div class="dark:text-white text-base">
+					{{'settings.tabs.general' | translate}}
+					<i class="ml-2 fa-solid fa-wrench"></i>
+				</div>
+			</ng-template>
+			
+			<div class="mx-10 mt-5">
+				<form (ngSubmit)="updateUserSubmit()" [formGroup]="UserUpdateForm">
+					<div class="group w-full font-po">
+						<label for="1" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+							{{'firstName' | translate}}
+						</label>
+						<input formControlName="firstName" [(ngModel)]="firstName" id="1" type="text" class="peer h-8 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 dark:bg-gray-400 dark:focus:bg-white" />
+						<span class="block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100 dark:text-white">
+							Min = 5, Max = 25
+						</span>
+					</div>
+					
+					<div class="group w-full my-5 font-po">
+						<label for="2" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+							{{'lastName' | translate}}
+						</label>
+						<input formControlName="lastName" [(ngModel)]="lastName" id="2" type="text" class="peer h-8 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 dark:bg-gray-400 dark:focus:bg-white" />
+						<span class="block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100 dark:text-white">
+							Min = 5, Max = 25
+						</span>
+					</div>
+					
+					<div class="group w-full font-po">
+						<label for="3" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+							{{'email' | translate}}
+						</label>
+						<input formControlName="email" [(ngModel)]="email" id="3" type="email" class="peer h-8 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 dark:bg-gray-400 dark:focus:bg-white" />
+						<span class="block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100 dark:text-white">
+							test@gmail.com
+						</span>
+					</div>
+					
+					<div class="flex flex-rows mt-5 gap-3 font-la font-regular">
+						<button class="w-1/2 rounded-lg px-4 py-2 bg-yellow-300 hover:bg-yellow-400 duration-300">
+							{{'settings.canelBtn' | translate}}
+						</button>
+						<button type="submit" class="w-1/2 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300">
+							{{'settings.saveChanges' | translate}} <i class="fa-solid fa-download"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			
+		</mat-tab>
+		
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<div class="dark:text-white text-base">
+					{{'settings.tabs.passwordChange' | translate}}
+					<i class="ml-2 fa-solid fa-lock"></i>
+				</div>
+			</ng-template>
+			
+			<div class="mx-10 mt-5">
+				<form (ngSubmit)="editPassword()" [formGroup]="PasswordForm">
+					<div class="group w-full font-po mb-5">
+						<label for="4" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+							{{'settings.oldPassword' | translate}}
+						</label>
+						<input formControlName="oldPassword" id="4" type="password" class="peer h-8 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 dark:bg-gray-400 dark:focus:bg-white" />
+						<span class="block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100 dark:text-white">
+							Min = 8, Max = 50
+						</span>
+					</div>
+					
+					<div class="group w-full font-po">
+						<label for="5" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">
+							{{'settings.newPassword' | translate}}
+						</label>
+						<input formControlName="newPassword" id="5" type="password" class="peer h-8 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 dark:bg-gray-400 dark:focus:bg-white" />
+						<span class="block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100 dark:text-white">
+							Min = 8, Max = 50
+						</span>
+					</div>
+					
+					<div class="flex flex-rows mt-5 gap-3 font-la font-regular">
+						<button class="w-1/2 rounded-lg px-4 py-2 bg-yellow-300 hover:bg-yellow-400 duration-300">
+							{{'settings.canelBtn' | translate}}
+						</button>
+						<button type="submit" class="w-1/2 rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300">
+							{{'settings.saveNewPassword' | translate}}
+						<i class="fa-solid fa-download"></i></button>
+					</div>
+				</form>
+			</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			
+		</mat-tab>
+		
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<div class="dark:text-white text-base">
+					{{'settings.tabs.yourCard' | translate}}
+					<i class="ml-2 fa-solid fa-database"></i>
+				</div>
+			</ng-template>
+			
+			<div class="relative overflow-x-auto mx-10 mt-5">
+				<div *ngIf="isCards == false">
+					<img src="./assets/card-not-found.png" />
+					<br />
+					<h1 class="font-po font-regular text-center text-2xl dark:text-white">{{'cardFound' | translate}}</h1>
+					<br />
+					<button routerLink="/home" mat-button class="font-po font-regular w-full text-white bg-green-500">
+						{{'navbarLink.createCard' | translate}}
+					</button>
+				</div>
+				<table *ngIf="isCards == true" class="table-fixed w-full text-sm text-left text-gray-500 border-2">
+					<thead class="text-base text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white">
+						<tr>
+							<th scope="col" class="px-6 py-3">
+								{{'settings.cardTitle' | translate}}
+							</th>
+							<th scope="col" class="px-6 py-3">
+								{{'settings.actions' | translate}}
+							</th>
+						</tr>
+					</thead>
+					<tbody *ngFor="let myCard of cardData">
+						<tr class="bg-white border-b dark:bg-gray-600 dark:text-white">
+							<th scope="row" class="px-6 py-4 text-sm text-gray-900 tracking-widest whitespace-nowrap dark:text-white">
+								{{myCard.title | titlecase}}
+							</th>
+							<td class="px-6 py-4 font-po font-regular flex gap-1 text-white">
+								<button (click)="moreMyCard(myCard._id)" class="rounded-lg px-2 py-1 bg-blue-400 hover:bg-blue-500 duration-300">
+									{{'buttons.moreBtn' | translate}} <i class="fa-solid fa-caret-down fa-rotate-270 ml-1"></i>
+								</button>
+								<button (click)="editMyCard(myCard._id)" class="rounded-lg px-2 py-1 bg-emerald-400 hover:bg-emerald-500 duration-300">
+									{{'buttons.editBtn' | translate}} <i class="fa-solid fa-pen ml-1"></i>
+								</button>
+								<button (click)="deleteMyCard(myCard._id)" class="rounded-lg px-2 py-1 bg-red-400 hover:bg-red-500 duration-300">
+									{{'buttons.deleteBtn' | translate}} <i class="fa-solid fa-trash-can ml-1"></i>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			
+		</mat-tab>
+	</mat-tab-group>
+	
+	<div class="mt-90">
+		<app-footer></app-footer>
+	</div>
+	
+</div>

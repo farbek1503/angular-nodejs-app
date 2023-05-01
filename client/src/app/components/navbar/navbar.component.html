@@ -1,0 +1,54 @@
+<nav class="text-black sticky top-0 z-50 backdrop-blur-lg shadow-lg">
+	<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+		<div class="relative flex h-16 items-center justify-between">
+			
+			<div class="absolute text-white inset-y-0 left-0 flex items-center sm:hidden">
+				<!-- Mobile menu button-->
+				<button class="flex relative text-xl mt-1 p-2 rounded-full ml-3 active:bg-gray-500 focus:ring focus:ring-white-600 bg-gray-400" [matMenuTriggerFor]="linksMenu">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+			
+			<mat-menu class="absolute left-0 z-10 mt-4 w-full origin-top-left rounded-md smM:w-40" #linksMenu="matMenu" yPosition="below">
+				<app-navbar-links></app-navbar-links>
+			</mat-menu>
+			
+			<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+				<div class="flex flex-shrink-0 items-center">
+					<img routerLink="/" class="block h-8 w-auto cursor-pointer" src="./assets/navbar.png" alt="Your Company">
+				</div>
+				<div class="sm:ml-6 sm:block mt-1">
+					<div class="flex space-x-4 hidden sm:block smM:absolute smM:left-0 smM:z-10 smM:mt-6 smM:w-full smM:origin-top-left smM:rounded-md smM:bg-white smM:py-1 smM:shadow-lg smM:ring-1 smM:ring-black smM:ring-opacity-5 smM:focus:outline-none">
+						<app-navbar-links></app-navbar-links>
+					</div>
+				</div>
+			</div>
+			<div class="absolute mt-2 inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+				<!-- Profile dropdown -->
+				<div class="relative ml-3">
+					<button class="flex rounded-full focus:ring" mat-button [matMenuTriggerFor]="profileMenu">
+						<img class="h-9 w-9 rounded-full" src="{{genderImg}}" alt="">
+					</button>
+					
+					<mat-menu class="absolute bg-slate-300 right-0 z-10 mt-2 w-48 origin-top-right rounded-md" #profileMenu="matMenu" xPosition="before">
+						<button mat-menu-item class="text-base font-la font-regular" routerLink="/settings">
+							<i class="fa-solid fa-gear"><mat-icon></mat-icon></i>
+							<span>{{'navbar.settings' | translate}}</span>
+						</button>
+						
+						<button mat-menu-item class="text-base font-la font-regular" (click)="toggleTheme()">
+							<i class="fa-solid fa-circle-half-stroke"><mat-icon></mat-icon></i>
+							<span>{{'themes.toggle' | translate}}</span>
+						</button>
+						
+						<hr class="my-2">
+						<button (click)="logout()" mat-menu-item class="text-red-600 text-base font-la font-regular">
+							<i class="fa-solid fa-right-from-bracket"><mat-icon></mat-icon></i>
+							<span class="text-red-600">{{'navbar.logout' | translate}}</span>
+						</button>
+					</mat-menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,21 @@
+<div class="dark:bg-gray-600 dark:text-white">
+	<app-navbar></app-navbar>
+	
+	<div class="flex flex-col mt-10 mx-6 w-2xl items-center bg-white rounded-lg shadow md:flex-row hover:bg-gray-100 dark:bg-gray-700 dark:text-white">
+		<img class="object-cover w-full rounded-t-lg h-xl md:h-auto md:w-3/4 md:rounded-none md:rounded-l-lg" src="{{image}}">
+		<div class="flex flex-col justify-between font-la p-4 leading-normal">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{title}}</h5>
+			<p class="mb-3 font-normal text-gray-500">{{description}}</p>
+			<p class="mb-3 font-normal text-gray-700 dark:text-gray-300">{{createdDate | date}}</p>
+			<h5 class="mb-5 text-base font-bold tracking-tight text-gray-700 dark:text-gray-300">{{'cards.author' | translate}}: {{author}}</h5>
+			<button routerLink="/home" mat-button class="font-po font-regular text-white bg-green-500">{{'cards.homeBtn' | translate}}</button>
+		</div>
+	</div>
+	
+	<br />
+	<br />
+	<br />
+	<br />
+	
+	<app-footer></app-footer>
+</div>

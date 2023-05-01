@@ -1,0 +1,82 @@
+{
+   "firstName": "Ism",
+   "lastName": "Familiya",
+   "gender": "Jinsi",
+   "male": "Erkak",
+   "woman": "Ayol",
+   "brithday": "Tug`ilgan Kun",
+   "email": "Elektron Pochta",
+   "password": "Parol",
+   "gotoLogin": "Loginga O`tish",
+   "gotoRegister": "Ro`yxatdan O`tish",
+   "cardFound": "Siz Hech Qanday Karta Yaratmadingiz",
+	"notFound": "Oops! Sahifa Topilmadi.",
+   "alerts": {
+		"delete": "O`chirish",
+      "allRequire": "Barcha ma`lumotlarni to`ldiring",
+      "serverError": "Server Hatosi",
+      "login": {
+         "userNotFound": "Foydalanuvchi Topilmadi",
+         "passwordWrong": "Noto`g`ri Parol",
+         "success": "Kirish Muvaffaqiyatli Yuklandi"
+      },
+		"register": {
+			"userExists": "Bu Foydalanuvchi Mavjud",
+			"success": "Muvaffaqiyatli Ro`yxatdan O`tildi"
+		},
+		"createCard": {
+			"success": "Karta Muvaffaqiyatli Yaratildi"
+		},
+		"editCard": {
+			"success": "Karta Muvaffaqiyatli O`zgartirildi"
+		}
+   },
+   "themes": {
+      "toggle": "Oq | Qora"
+   },
+   "buttons": {
+      "moreBtn": "Ko`proq",
+      "editBtn": "Tahrirlash",
+      "deleteBtn": "O`chirish",
+      "back": "Ortga",
+      "next": "Keyingisi",
+      "login": "Tizimga Kirish",
+      "register": "Ro`yxatdan O`tish"
+   },
+   "cards": {
+      "title": "Sarlavha",
+      "description": "Tavsif",
+      "imgUrl": "Image URL",
+      "createBtn": "Card Yaratish",
+      "editBtn": "Tahrirlashni Saqlash",
+      "author": "Muallif",
+      "homeBtn": "Uyga O`tish"
+   },
+   "navbar": {
+      "settings": "Sozlamalar",
+      "languages": "Tillar",
+      "logout": "Chiqish"
+   },
+   "navbarLink": {
+      "home": "Uy",
+      "createCard": "Card Yaratish"
+   },
+   "settings": {
+      "tabs": {
+         "general": "Umumiy",
+         "passwordChange": "Parolni O`zgartirish",
+         "yourCard": "Mening Cardlarim"
+      },
+      "canelBtn": "Bekor Qilish",
+      "saveChanges": "O`zgarishlarni Saqlash",
+      "saveNewPassword": "Yangi Parolni Saqlash",
+      "oldPassword": "Eski Parol",
+      "newPassword": "Yangi Parol",
+      "cardTitle": "Sarlavha",
+      "createdCard": "Yaratilgan Card",
+      "actions": "Harakatlar"
+   },
+   "footer": {
+      "msg": "Barcha huquqlar himoyalangan"
+   }
+}

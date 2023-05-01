@@ -1,0 +1,37 @@
+<footer class="bg-white dark:bg-gray-700 dark:text-white">
+	<div class="mx-auto w-full max-w-screen-xl p-4 py-6">
+		<hr class="border mb-1" />
+		
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<div class="sm:flex sm:justify-between sm:w-3/5 smM:flex smM:justify-between">
+				<span class="text-base text-gray-500 dark:text-white sm:text-center font-po font-regular">
+					© 2023 {{'footer.msg' | translate}}
+				</span>
+				
+				<div class="w-50">
+					<button class="text-base bg-indigo-600 shadow-xl hover:bg-indigo-500 focus:ring text-white px-4 py-2 rounded-full font-la font-bold" [matMenuTriggerFor]="menu">
+						<i class="fa-solid fa-globe mr-2"></i>
+						<span>{{'navbar.languages' | translate}}</span>
+						<mat-menu class="bg-indigo-400 w-xl" #menu="matMenu">
+							<button class="text-white" mat-menu-item (click)="changeLang(lang)" *ngFor="let lang of translate.getLangs()">
+								{{lang | uppercase}}
+							</button>
+						</mat-menu>
+					</button>
+				</div>
+			</div>
+			
+			<div class="flex mt-4 space-x-6 sm:justify-center smM:justify-center sm:mt-0">
+				<a mat-icon-button target="_blank" href="https://www.instagram.com/bekk1__i503/" class="text-gray-500 bg-gray-300 p-1 rounded-lg dark:bg-white">
+					<i class="fa-brands fa-instagram fa-lg transition duration-500 text-red-900 hover:scale-150"></i>
+				</a>
+				<a mat-icon-button target="_blank" href="https://t.me/bekki_me" class="text-gray-500 bg-gray-300 p-1 rounded-lg dark:bg-white">
+					<i class="fa-brands fa-telegram fa-lg transition duration-500 text-blue-600 hover:scale-150"></i>
+				</a>
+				<a mat-icon-button target="_blank" href="https://github.com/farbek1503" class="text-gray-500 bg-gray-300 p-1 rounded-lg dark:bg-white">
+					<i class="fa-brands fa-github fa-lg transition duration-500 text-gray-900 hover:scale-150"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
