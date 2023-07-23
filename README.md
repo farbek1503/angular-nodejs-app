@@ -1,4 +1,4 @@
-# angular-nodejs-app https://angular-nodejs-client.vercel.app
+# angular-nodejs-app https://card-bek.vercel.app
 
 # clint command
 1. cd client
