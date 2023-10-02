@@ -1,11 +1,15 @@
-# card-app https://card-bek.vercel.app
+# Card Application [Link](https://card-bek.vercel.app)
 
-# clint command
-1. cd client
-2. npm i
-3. ng serve
+![Login](./screenshot/login.png)
 
-# server command
-1. cd server
-2. npm i
-3. node index.js
+![Home](./screenshot/home.png)
+
+
+## Themes 🌈
+* Light
+* Dark
+
+## Languages 🌍
+* Eng
+* Rus
+* Uzb
